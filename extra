@@ -1,0 +1,38 @@
+https://code.visualstudio.com/download > download & install
+https://nodejs.org/en/ > download & install
+https://github.com/ > create an account
+https://git-scm.com/downloads > download & install
+https://www.postman.com/ > download & install
+
+
+NodeJs>
+> is Single Threaded, Non Blocking, Async I/O
+> open source
+> code > Machine Code
+
+
+NPM
+> Node Package Manager
+
+JSON
+> JavaScript Object Notation
+[
+    {
+        "name":"John",
+        "city":"Delhi"
+    },
+    {
+        "name":"Nikita",
+        "city":"Paris"
+    },
+    {
+        "name":"Amit",
+        "city":"Amsterdam",
+        "class":"Node"
+    }
+]
+
+
+>>>>Package.JSON
+>>>>Install Package
+>>>>NodeIn built
