@@ -4,6 +4,37 @@ https://github.com/ > create an account
 https://git-scm.com/downloads > download & install
 https://www.postman.com/ > download & install
 
+NPM
+Basic NodeJS(in built)(Os,file,http)
+NodeJS(full Stack App) (Node-EJS-Mongo-Express)
+Third Party Api (Weather Api)
+Redis  > 6379
+ImageUpload
+Node-Es6(.babel)
+MongoDb Basic >27017  (local/cloud)
+Api with NodeJS(Rest)>1
+Swagger
+Github
+DashBoard(Crud)
+--Deployment of app---
+Docker
+Heroku
+Nginx
+Pm2
+Testing
+Login/Logout(JWT)
+Oauth(with github)
+Oauth(with google)
+NodeJs with postgres
+GraphQl API
+Paytm-Payment
+Chatapp
+TelegramChat
+Email With Node(sendgird)(https://app.sendgrid.com/)
+FIREBASE
+--------NOT---------
+React/Angular
+Html/css/jquery
 
 NodeJs>
 > is Single Threaded, Non Blocking, Async I/O
