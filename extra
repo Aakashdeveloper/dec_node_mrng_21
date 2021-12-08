@@ -63,7 +63,39 @@ JSON
     }
 ]
 
-
 >>>>Package.JSON
 >>>>Install Package
+
+
+>>>>Package.JSON
+> it the entry point to the app
+> Script (start,test)
+> All the packages
+> MeTa Data (name, description,version)
+
+///Step To Generate The Package.Json////
+* NodeJs Must be install in laptop
+> npm init 
+> Answer all question
+> type "yes"
+
+>>>Local Dependencies
+> Install for particular application
+> Scope of the packages is for same app
+
+///Step To Install Packages////
+> go inside the folder using cmd/terminal
+> npm i packagename
+
+>>PackageLock > dependency tree
+
+
+>>>Local Dependencies
+>>>Global Dependencies
+>>> Dev Dependencies
+
 >>>>NodeIn built
+>>Os
+>>fs
+>>http
+>>dummyApi
