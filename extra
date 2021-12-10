@@ -91,7 +91,27 @@ JSON
 
 
 >>>Local Dependencies
+
 >>>Global Dependencies
+> Install in your laptop irrespective of folder
+> We need admin access to install
+> Can be used by any application
+> Will not added to packages.json
+> package Required to start, build the app
+
+//// Step to install global packages/////
+# window
+> open the cmd as admin
+> npm i -g packageName
+
+# Mac/linux
+> open the terminal
+> sudo npm i -g packageName
+
+>>nodemon
+npm i -g nodemon
+help to do continous development
+
 >>> Dev Dependencies
 
 >>>>NodeIn built
