@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 /*
-fs.writeFile('myCode.txt',"This is From Nareshit",function(err){
+fs.writeFile('myCode.json',"[{"name":"jjh"}]",function(err){
     if(err) throw err;
     console.log('File Created')
 })
