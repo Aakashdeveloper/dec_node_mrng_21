@@ -1,0 +1,5 @@
+::1 - GET /products/details HTTP/1.1 304 - - 4.446 ms
+::1 - GET /products/ HTTP/1.1 200 8358 - 1.755 ms
+::1 - GET /category/ HTTP/1.1 200 323 - 1.081 ms
+::1 - GET /category/details HTTP/1.1 304 - - 0.887 ms
+::1 - GET /kkjbk HTTP/1.1 404 144 - 2.008 ms
