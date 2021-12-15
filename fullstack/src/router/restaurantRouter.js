@@ -1,7 +1,7 @@
 var express = require('express');
-var categoryRouter = express.Router();
+var restaurantsRouter = express.Router();
 
-var category = [
+var restaurants = [
     {
         "id":1,
         "category": "Fashion",
@@ -24,15 +24,14 @@ var category = [
     }
 ]
 
-categoryRouter.route('/')
+restaurantsRouter.route('/')
     .get(function(req,res){
-        //res.send(category)
-        res.render('category',{title:'Category Page',data:category})
+        res.send(restaurants)
     })
 
-categoryRouter.route('/details')
+    restaurantsRouter.route('/details')
     .get(function(req,res){
-        res.send('category Details')
+        res.send('restaurants Details')
     })
 
-module.exports = categoryRouter
+module.exports = restaurantsRouter
