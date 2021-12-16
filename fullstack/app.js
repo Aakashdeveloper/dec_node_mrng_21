@@ -29,8 +29,6 @@ app.set('view engine', 'ejs')
 // for logs
 app.use(morgan('short',{stream: fs.createWriteStream('./app.logs')}))
 
-
-
 var data = [
     {
         "id":1,
