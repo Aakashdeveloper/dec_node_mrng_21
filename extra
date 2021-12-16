@@ -119,3 +119,13 @@ help to do continous development
 >>fs
 >>http
 >>dummyApi
+
+/////////
+params (/) > complusory > req.params.id
+queryParams(?)> no need to define anywhere > req.query.name
+
+function add(a,b){
+    return a+b
+}
+
+add(1,2)

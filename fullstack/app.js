@@ -7,7 +7,15 @@ var port = process.env.PORT || 9700;
 
 var morgan  = require('morgan');
 
-var categoryRouter = require('./src/router/categoryRouter')
+var menu = [
+    {link:'/', name:'Home'},
+    {link:'/category', name:'Category'},
+    {link:'/products', name:'Products'},
+    {link:'/restaurants', name:'Restaurants'},
+    {link:'/abc', name:'Abc'}
+]
+
+var categoryRouter = require('./src/router/categoryRouter')(menu)
 var productRouter = require('./src/router/productRouter')
 var restaurantsRouter = require('./src/router/restaurantRouter')
 
@@ -20,6 +28,8 @@ app.set('view engine', 'ejs')
 
 // for logs
 app.use(morgan('short',{stream: fs.createWriteStream('./app.logs')}))
+
+
 
 var data = [
     {
@@ -39,7 +49,7 @@ var data = [
 //default Route
 app.get('/',function(req,res){
     // res.send('Welcome to app')
-    res.render('index',{title:'Home Page',data:data})
+    res.render('index',{title:'Home Page',data:data,menu})
 })
 
 

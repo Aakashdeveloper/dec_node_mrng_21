@@ -6,12 +6,12 @@
 		<title>Storystrap Template</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -23,14 +23,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <a href="/" class="navbar-brand">Home</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <% for(i=0;i<menu.length;i++){%>
-          <li>
-            <a href="<%=menu[i].link%>"><%=menu[i].name%></a>
-          </li>
-        <%}%>
+        <li>
+          <a href="#">Category</a>
+        </li>
+        <li>
+          <a href="#">Category</a>
+        </li>
+        <li>
+          <a href="#">Category</a>
+        </li>
+        <li>
+          <a href="#">Category</a>
+        </li>
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
@@ -90,26 +98,31 @@
           
           <!--/stories-->
           <%for(i=0;i<data.length;i++){%>
-          <div class="row">    
-            <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="<%=data[i].thumb%>" style="width:100px;height:100px" class="img-circle"></a>
-            </div>
-            <div class="col-md-10 col-sm-9">
-              <h3><%=data[i].category%></h3>
-              <div class="row">
-                <div class="col-xs-9">
-                  <h4>
-                      <span class="label label-default"> 
-                          <a href="/products/category/<%=data[i].id%>?name=john" class="text-muted" style="color:white">Read More</a></span>
-                    </h4>
+            <div class="row">    
+                <br>
+                <div class="col-md-2 col-sm-3 text-center">
+                  <a class="story-title" href="#"><img alt="" src="<%=data[i].Image%>" style="width:100px;height:100px" class="img-circle"></a>
                 </div>
-                <div class="col-xs-3"></div>
+                <div class="col-md-10 col-sm-9">
+                  <h3><%=data[i].product_name%></h3>
+                  <div class="row">
+                    <div class="col-xs-9">
+                      <h4><span class="label label-default"><%=data[i].category%></span></h4><h4>
+                      <small style="font-family:courier,'new courier';font-size:20px" class="text-muted">
+                      Rs. <%=data[i].Price%>  •
+                      <small style="font-family:courier,'new courier';font-size:20px" class="text-muted">
+                       <%=data[i].Color%>  •
+                       <small style="font-family:courier,'new courier';font-size:20px" class="text-muted">
+                       <%=data[i].Brand%>
+                       <br/><br/>
+                      <a href="#" class="label label-primary">Read More</a></small>
+                      </h4></div>
+                    <div class="col-xs-3"></div>
+                  </div>
+                  <br><br>
+                </div>
               </div>
-              <br><br>
-            </div>
-          </div>
-          <hr>
+              <hr>
           <%}%>
           <!--/stories-->
           

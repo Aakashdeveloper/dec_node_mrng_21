@@ -519,6 +519,16 @@ productRouter.route('/')
         res.send(products)
     })
 
+productRouter.route('/category/:id')
+    .get(function(req,res){
+        //var id = req.params.id;
+        var {id} = req.params
+        var name = req.query.name;
+        console.log(">>>>>",id)
+        console.log(">>>>>",name)
+        res.render('products',{title:'Products Page',data:products})
+    })
+
 productRouter.route('/details')
     .get(function(req,res){
         res.send('products Details')
