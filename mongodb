@@ -1,0 +1,81 @@
+its nosql database
+> not a sql
+
+Sql        NoSql
+database   Database
+table      collection
+row        documents
+select     find
+insert     insert
+update     update
+delete     remove
+
+
+>>> SQL
+RollNo | Hindi | English | Computer |
+ 1     |       | 80      |          |
+ 2     |   80  |         |          |
+ 3     |   80  |         |   90     |
+
+
+>>> NoSql
+
+[
+    {
+        rollNo:1,
+        english:80
+    },
+    {
+        rollNo:2,
+        hindi:80
+    },
+    {
+        rollNo:3,
+        hindi:80,
+        computer:90
+    }
+
+]
+
+
+/////////Step to setup mongodb///////
+> install mongodb
+> in C drive create one folder by the name of "db"
+> in "db" create one folder by the name of "data"
+
+> C:\data\db
+> 27017
+
+>>>>Step to start server<<<<
+>open cmd
+> go inside folder
+    c:\programFile\mongodb\5.1\server\bin
+> type mongod
+(should be always running till the app is running)
+
+>>>>Step to start client<<<<
+>open new cmd
+> go inside folder
+    c:\programFile\mongodb\5.1\server\bin
+> type mongo
+(should be always running till the app is running)
+
+
+///to see all database
+> show dbs
+
+/// to go inside database
+> use database name
+
+//// to see all collection
+> show collection
+
+//// to see data in collection
+> db.collectionName.find()
+
+_id > is primary key, no duplicates
+
+12 byte
+(random number) 5 bytes
+(series) 3bytes 
+(timestamp) 4bytes

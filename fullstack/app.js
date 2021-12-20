@@ -11,8 +11,6 @@ var menu = [
     {link:'/', name:'Home'},
     {link:'/category', name:'Category'},
     {link:'/products', name:'Products'},
-    {link:'/restaurants', name:'Restaurants'},
-    {link:'/abc', name:'Abc'}
 ]
 
 var categoryRouter = require('./src/router/categoryRouter')(menu)
