@@ -79,3 +79,15 @@ _id > is primary key, no duplicates
 (random number) 5 bytes
 (series) 3bytes 
 (timestamp) 4bytes
+
+// Create new database
+use databaseName
+
+// to see all collection
+show collections
+
+/// insert data
+db.collectionname.insert({name:"John"})
+db.test.insert({name:'John'})
+db.test.insert({_id:1,name:'Amit'})
+db.test.insert({_id:1,name:'Nikita'})

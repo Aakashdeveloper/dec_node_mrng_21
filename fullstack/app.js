@@ -14,7 +14,7 @@ var menu = [
 ]
 
 var categoryRouter = require('./src/router/categoryRouter')(menu)
-var productRouter = require('./src/router/productRouter')
+var productRouter = require('./src/router/productRouter')(menu)
 var restaurantsRouter = require('./src/router/restaurantRouter')
 
 // static file path
