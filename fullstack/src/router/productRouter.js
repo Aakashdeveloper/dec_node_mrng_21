@@ -15,7 +15,7 @@ function router(menu){
                     if(err){
                         res.status(501).send('Error While fetching')
                     }else{
-                        res.send(response)
+                        res.render('products',{title:'Products Page',data:response,menu:menu})
                     }
                 })
             }
@@ -27,15 +27,42 @@ function router(menu){
         .get(function(req,res){
             //var id = req.params.id;
             var {id} = req.params
+            console.log(">>>>id",id)
             var name = req.query.name;
-            console.log(">>>>>",id)
-            console.log(">>>>>",name)
-            res.render('products',{title:'Products Page',data:products})
+            mongodb.connect(url,function(err,dc){
+                if(err){
+                    res.status(501).send('Error While Connecting')
+                }else{
+                    var dbObj = dc.db('decnode');
+                    dbObj.collection('products').find({"category_id":Number(id)}).toArray(function(err,response){
+                        if(err){
+                            res.status(501).send('Error While fetching')
+                        }else{
+                            res.render('products',{title:'Products Page',data:response,menu:menu})
+                        }
+                    })
+                }
+            })
         })
 
-    productRouter.route('/details')
+    productRouter.route('/details/:id')
         .get(function(req,res){
-            res.send('products Details')
+            var {id} = req.params
+            console.log(">>>>id",id)
+            mongodb.connect(url,function(err,dc){
+                if(err){
+                    res.status(501).send('Error While Connecting')
+                }else{
+                    var dbObj = dc.db('decnode');
+                    dbObj.collection('products').find({"id":Number(id)}).toArray(function(err,response){
+                        if(err){
+                            res.status(501).send('Error While fetching')
+                        }else{
+                            res.render('productDetails',{title:'Products Details Page',data:response,menu:menu})
+                        }
+                    })
+                }
+            })
         })
 
     return productRouter
