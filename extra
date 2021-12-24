@@ -141,3 +141,13 @@ var b = "My age is "+a
 var a = 10
 var b = `My age is ${a}`
 "My age is 10"
+
+///////
+download Redis > https://github.com/dmajkic/redis/downloads
+redis > 6379
+
+KEYS *
+set keyname value
+get keyname 
+del keyname
+FLUSHALL
