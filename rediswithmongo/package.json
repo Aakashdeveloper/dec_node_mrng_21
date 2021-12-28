@@ -1,9 +1,10 @@
 {
-  "name": "redisapp",
+  "name": "rediswithmongo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
@@ -11,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.24.0",
     "express": "^4.17.2",
-    "redis": "^4.0.1"
+    "mongodb": "^4.2.2",
+    "redis": "^3.1.0"
   }
 }

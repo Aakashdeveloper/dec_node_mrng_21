@@ -8,10 +8,10 @@ NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
-///////////////////////////////////
 Redis  > 6379
+redisWithMongo
+///////////////////////////////////
 Node-Es6(.babel)
-
 ImageUpload
 MongoDb Basic >27017  (local/cloud)
 Api with NodeJS(Rest)>1
@@ -151,3 +151,11 @@ set keyname value
 get keyname 
 del keyname
 FLUSHALL
+
+///es5
+function add(a,b){
+    return a+b
+}
+
+//Es6
+let add = (a,b) => { return a+b}
