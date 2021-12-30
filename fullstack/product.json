@@ -1,4 +1,4 @@
-db.products.insert([
+db.products.insertMany([
     {
         "id": 1,
         "product_name": "Girls top",
