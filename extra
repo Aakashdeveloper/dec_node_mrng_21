@@ -24,6 +24,7 @@ Heroku
 Nginx
 Pm2
 Testing
+
 Login/Logout(JWT)
 Oauth(with github)
 Oauth(with google)
@@ -163,3 +164,10 @@ npm i @babel/core @babel/register @babel/preset-env
 ///////
 
 npm i body-parser ejs express express-fileupload
+
+mongodb+srv://test:test123@cluster0.f8vmc.mongodb.net/decnode?retryWrites=true&w=majority
+
+C > Create
+R > Read
+U > Update
+D > Delete
