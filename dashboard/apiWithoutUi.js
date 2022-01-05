@@ -17,6 +17,65 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
 
+// health check
+app.get('/',(req,res) => {
+    res.status(200).send('Health Ok');
+});
+
+app.get('/health',(req,res) => {
+    res.status(200).send('Health Ok');
+});
+
+//Read
+app.get('/users',(req,res) => {
+    var query = {}
+    if(req.query.city && req.query.role){
+        query={city:req.query.city,role:req.query.role}
+    }
+    else if(req.query.city){
+        query={city:req.query.city}
+    }
+    else if(req.query.role){
+        query={role:req.query.role}
+    }
+    else if(req.query.isActive){
+        let isActive = req.query.isActive;
+        if(isActive == "false"){
+            isActive = false
+        }else{
+            isActive = true
+        }
+        // query = {isActive:isActive}
+        query = {isActive}
+    }
+    else{
+        query={isActive:true}
+    }
+    db.collection(col_name).find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.status(200).send(result);
+    });
+});
+
+//find particular user
+app.get('/user/:id',(req,res) => {
+    var id = mongo.ObjectId(req.params.id);
+    db.collection(col_name).find({_id:id}).toArray((err,result) => {
+        if(err) throw err;
+        res.status(200).send(result);
+    });
+})
+
+//Add user > POST
+app.post('/addUser',(req,res) => {
+    console.log(req.body)
+    db.collection(col_name).insert(req.body,(err,result) => {
+        if(err) throw err;
+        res.status(200).send('User Added');
+    })
+})
+
+
 
 
 //DB COnnection
