@@ -19,12 +19,27 @@ app.use(cors());
 
 // health check
 app.get('/',(req,res) => {
-    res.render('index');
+    db.collection(col_name).find({}).toArray((err,result) => {
+        if(err) throw err;
+        res.status(200).render('index',{data:result})
+    })
 });
 
 app.get('/health',(req,res) => {
     res.status(200).send('Health Ok');
 });
+
+//render Form
+app.get('/new',(req,res) => {
+    res.render('admin')
+})
+
+// static file path
+app.use(express.static(__dirname+'/public'));
+// html file path
+app.set('views','./src/views')
+//view engine path
+app.set('view engine', 'ejs')
 
 //Read
 app.get('/users',(req,res) => {
@@ -69,7 +84,14 @@ app.get('/user/:id',(req,res) => {
 //Add user > POST
 app.post('/addUser',(req,res) => {
     console.log(req.body)
-    db.collection(col_name).insert(req.body,(err,result) => {
+    const data = {
+        "name":req.body.name,
+        "city":req.body.city,
+        "phone":req.body.phone,
+        "role":req.body.role?req.body.role:'User',
+        "isActive":true
+    }
+    db.collection(col_name).insert(data,(err,result) => {
         if(err) throw err;
         res.status(200).send('User Added');
     })
