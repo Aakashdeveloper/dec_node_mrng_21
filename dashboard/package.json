@@ -1,11 +1,12 @@
 {
   "name": "dashboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node apiWithoutUi",
-    "dev": "nodemon apiWithoutUi"
+    "dev": "nodemon apiWithoutUi",
+    "ui": "nodemon apiWithUI"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
-    "mongodb": "^4.2.2"
+    "mongodb": "^4.2.2",
+    "swagger-ui-express": "^4.3.0"
   }
 }

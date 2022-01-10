@@ -14,8 +14,8 @@ Node-Es6(.babel)
 ImageUpload
 MongoDb Basic >27017  (local/cloud)
 Api with NodeJS(Rest)>1
-///////////////////////////////////
 DashBoard(Crud)
+///////////////////////////////////
 Swagger
 Github
 --Deployment of app---
@@ -27,6 +27,7 @@ Testing
 
 Login/Logout(JWT)
 Oauth(with github)
+
 Oauth(with google)
 NodeJs with postgres
 GraphQl API

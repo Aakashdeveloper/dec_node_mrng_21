@@ -8,6 +8,12 @@ const MongoClient = mongo.MongoClient;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoUrl = process.env.MongoUrlLive;
+const swaggerUi = require('swagger-ui-express');
+const package = require('./package.json');
+const swaggerDocument = require('./swagger.json');
+
+swaggerDocument.info.version = package.version;
+app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 let db;
 let col_name = "decUser"

@@ -61,6 +61,9 @@
                                 <button type="button" class="delete btn btn-danger" id="<%=data[i]._id%>">
                                     Delete
                                 </button>
+                                <button type="button" class="success btn btn-success" id="<%=data[i]._id%>">
+                                    Activate
+                                </button>
                             </td>
                         </tr>
                         <%}%>
@@ -168,7 +171,7 @@
             if(response === true){
                 $.ajax({
                     type: 'PUT',
-                    url: '/deactivate',
+                    url: '/deactivateUser',
                     method: 'put',
                     data: {"_id":id},
                     success: function(data){
@@ -182,6 +185,30 @@
                     }
                     else{
                         console.log("not deleted")
+                    }
+                });
+        // activate user 
+        $('.success').click(function() {
+            var response = confirm("do you want to activate user")
+            id = this.id;
+            console.log(response)
+            if(response === true){
+                $.ajax({
+                    type: 'PUT',
+                    url: '/activateUser',
+                    method: 'put',
+                    data: {"_id":id},
+                    success: function(data){
+                        console.log('data is '+JSON.stringify(data));
+                        window.location.reload()
+                    },
+                    error: function(){
+                        alert('No data');
+                        }
+                        });
+                    }
+                    else{
+                        console.log("not activated")
                     }
                 });
         </script>

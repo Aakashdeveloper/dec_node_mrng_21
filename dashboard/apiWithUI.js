@@ -93,7 +93,8 @@ app.post('/addUser',(req,res) => {
     }
     db.collection(col_name).insert(data,(err,result) => {
         if(err) throw err;
-        res.status(200).send('User Added');
+        //res.status(200).send('User Added');
+        res.redirect('/')
     })
 })
 

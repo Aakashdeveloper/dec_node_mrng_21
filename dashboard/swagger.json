@@ -1,0 +1,110 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "description":"This is the Api for user management",
+        "version":"__version__"
+    },
+    "tags":[
+        {
+            "name":"PUBLIC ROUTE",
+            "description":"PUBLIC ROUTE"
+        }
+    ],
+    "paths":{
+        "/health":{
+            "summary":"Testing Health of application",
+            "get":{
+                "description":"Testing Health of application",
+                "tags":["PUBLIC ROUTE"],
+                "responses":{
+                    "200":{
+                        "description":"HEalth Check Pass"
+                    }
+                }
+            }
+        },
+        "/users":{
+            "summary":"Testing Users",
+            "get":{
+                "description":"Getting all users",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"query",
+                        "name":"role",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Choose Role as Admin or User"
+                    },
+                    {
+                        "in":"query",
+                        "name":"city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Enter Your City"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"HEalth Check Pass"
+                    }
+                }
+            }
+        },
+        "/user/{id}":{
+            "summary":"Testing Particular Users",
+            "get":{
+                "description":"Getting Particular users",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"path",
+                        "name":"id",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Enter User Id"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Getting Particular users"
+                    }
+                }
+            }
+        },
+        "/addUser":{
+            "summary":"Add New User",
+            "post":{
+                "description":"Add New Use",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "name":"Kanika",
+                                "city":"Delhi",
+                                "phone":88978789,
+                                "role":"User",
+                                "isActive":true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"User Added"
+                    }
+                }
+            }
+        }
+    }
+
+}
