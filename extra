@@ -15,9 +15,9 @@ ImageUpload
 MongoDb Basic >27017  (local/cloud)
 Api with NodeJS(Rest)>1
 DashBoard(Crud)
-///////////////////////////////////
 Swagger
 Github
+///////////////////////////////////
 --Deployment of app---
 Docker
 Heroku

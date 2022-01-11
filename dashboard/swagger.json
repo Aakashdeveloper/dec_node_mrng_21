@@ -104,6 +104,63 @@
                     }
                 }
             }
+        },
+        "/updateUser":{
+            "summary":"Update User",
+            "put":{
+                "description":"Update Use",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id": "61d4f597a88aa8de4d340de9",
+                                "name": "Aman",
+                                "city": "Paris",
+                                "phone": 1234567,
+                                "role": "User",
+                                "isActive": true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"User updated"
+                    }
+                }
+            }
+        },
+        "/deleteUser":{
+            "summary":"Delete User",
+            "delete":{
+                "description":"Delete Use",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id": "61d4f597a88aa8de4d340de9"
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"User Delete"
+                    }
+                }
+            }
         }
     }
 

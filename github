@@ -1,0 +1,24 @@
+// first time from new folder
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/nodetest1.git
+git push -u origin master
+
+git status
+
+// next all time
+git add .
+git commit -m "first commit"
+git push
+
+/// branch
+git checkout -b branchname
+
+git add .
+git commit -m "first commit"
+git push -u origin branchname
+
+
+https://raw.githubusercontent.com/Aakashdeveloper/Aakashdeveloper/master/README.md
+https://www.heroku.com/
