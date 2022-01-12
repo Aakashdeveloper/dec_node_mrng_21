@@ -17,14 +17,13 @@ Api with NodeJS(Rest)>1
 DashBoard(Crud)
 Swagger
 Github
-///////////////////////////////////
 --Deployment of app---
-Docker
 Heroku
-Nginx
 Pm2
+Docker
+Nginx
 Testing
-
+///////////////////////////////////
 Login/Logout(JWT)
 Oauth(with github)
 
@@ -172,3 +171,15 @@ C > Create
 R > Read
 U > Update
 D > Delete
+
+Pm2
+npm i -g pm2
+pm2 start filename
+pm2 status
+pm2 stop filename
+
+docker build . -t imagename
+docker run -p 9200:9800 imagename
+
+
+npm i chai mocha chai-http

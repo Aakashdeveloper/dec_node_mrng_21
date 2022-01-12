@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
-const port = process.env.PORT || 7623;
+const port = 7623;
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mongoUrl = process.env.MongoUrlLive;
+const mongoUrl = "mongodb+srv://local:testuser@cluster0.f8vmc.mongodb.net"
 
 let db;
 let col_name = "decUser"
