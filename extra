@@ -183,3 +183,6 @@ docker run -p 9200:9800 imagename
 
 
 npm i chai mocha chai-http
+
+////////////////
+npm i jsonwebtoken express cors mongoose bcryptjs body-parser 
