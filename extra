@@ -211,3 +211,23 @@ npm i cors ejs superagent request express
 
 Client ID
 
+///dummy api
+npx json-server --watch db.json --port 8700
+//query
+{
+  Products(id:5){
+   product_name,
+   category,
+   Price
+  }
+}
+
+//mutation
+mutation{
+  addProducts(
+    id:50,
+    product_name:"Test product",
+  ){
+    id
+  }
+}
