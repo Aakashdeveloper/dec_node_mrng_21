@@ -26,13 +26,13 @@ Testing
 Login/Logout(JWT)
 Oauth(with github)
 Oauth(with google)
-///////////////////////////////////
-NodeJs with postgres
 GraphQl API
+NodeJs with postgres
 Paytm-Payment
+Email With Node(sendgird)(https://app.sendgrid.com/)
+///////////////////////////////////
 Chatapp
 TelegramChat
-Email With Node(sendgird)(https://app.sendgrid.com/)
 FIREBASE
 --------NOT---------
 React/Angular
@@ -231,3 +231,6 @@ mutation{
     id
   }
 }
+
+brew services start postgresql
+brew services stop postgresql
